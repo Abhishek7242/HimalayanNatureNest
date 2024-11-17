@@ -44,26 +44,22 @@ return [
         ],
 
    
-        'mysql' => [
+     'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', 'himalayan-nature-nest.mysql.database.azure.com'), // Your Azure MySQL host
+            'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'Himalayan-Nature-Nest'), // Your database name
-            'username' => env('DB_USERNAME', 'himalayan_nature_nest_admin'), // Your username
-            'password' => env('DB_PASSWORD', 'P@ssw0rd!2024$SecuRe'), // Your password
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
-            'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
-            'options' => extension_loaded('pdo_mysql') ? [
-                PDO::MYSQL_ATTR_SSL_CA => base_path('DigiCertGlobalRootG2.crt.pem'),
-
-
-            ] : [],
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
         ],
 
 
