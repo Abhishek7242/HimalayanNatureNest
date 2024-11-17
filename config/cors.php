@@ -11,24 +11,24 @@ return [
     | or "CORS". This determines what cross-origin operations may execute
     | in web browsers. You are free to adjust these settings as needed.
     |
-    | To learn more: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
-    |
     */
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    'paths' => ['/*'],  // Allows all paths or adjust as needed
 
-    'allowed_methods' => ['*'],
+    'allowed_methods' => ['*'],  // Allows all HTTP methods
 
-    'allowed_origins' => ['*'],
+    'allowed_origins' => [
+        'https://himalayannaturenest.azurewebsites.net/',  // Replace with your Azure app URL
+    ],
 
     'allowed_origins_patterns' => [],
 
-    'allowed_headers' => ['*'],
+    'allowed_headers' => ['*'],  // Allows all headers
 
-    'exposed_headers' => [],
+    'exposed_headers' => [],  // Optional: add headers you want exposed to the browser
 
     'max_age' => 0,
 
-    'supports_credentials' => false,
+    'supports_credentials' => true,  // Enable if using cookies or credentials
 
 ];
