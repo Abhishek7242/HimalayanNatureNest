@@ -62,7 +62,7 @@ return [
             'options' => extension_loaded('pdo_mysql') ? [
                 PDO::MYSQL_ATTR_SSL_CA => base_path('DigiCertGlobalRootG2.crt.pem'),
 
-                PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false, // Optional: Disable server certificate verification for local development
+
             ] : [],
         ],
 
