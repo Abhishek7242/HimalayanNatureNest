@@ -1,0 +1,464 @@
+#popular-adventures-section {
+  padding-bottom: 80px;
+  background: white;
+}
+
+#popular-adventures-inner-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#popular-adventures-heading-container h2,
+#popular-adventures-desc-container h2 {
+  text-align: center;
+}
+
+#popular-adventures-heading-container h2 {
+  font-size: 21px;
+}
+
+#popular-adventures-desc-container h2 {
+  font-weight: 700;
+  font-size: 45px;
+}
+
+#popular-adventures-desc-container h2 span {
+  color: rgb(81, 81, 255);
+  font-weight: 700;
+
+}
+
+#popular-adventures-desc-container p {
+  font-size: 16px;
+  text-align: center;
+}
+
+#popular-adventures-section .card {
+  display: inline-block;
+  position: relative;
+  width: 400px;
+  height: 500px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  margin: 30px;
+  transition: .2s ease;
+  will-change: transform, box-shadow;
+}
+
+#popular-adventures-section .card:hover {
+  scale: 1.1;
+}
+
+#popular-adventures-section .trip-duration-label {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background-color: white;
+  box-shadow: 0 0 19px rgba(0, 0, 0, 0.313);
+  transition: .6s ease;
+  will-change: opacity, transform;
+  z-index: 1;
+}
+
+#popular-adventures-section .card:hover .trip-duration-label {
+  opacity: 1;
+  scale: 1;
+}
+
+#popular-adventures-section .trip-duration-label h4 {
+  transition: .4s;
+  padding: 9px 18px;
+  margin: 0;
+  background-color: #3154ff;
+  color: rgb(0, 0, 0);
+  border-radius: 30px;
+  font-size: 23px;
+  transform: translate(-4px, -3px);
+}
+
+#popular-adventures-section .trip-duration-label:hover h4 {
+  background-color: #0024d7;
+  color: rgb(255, 255, 255);
+  transform: translate(0, 0);
+}
+
+#popular-adventures-section .image {
+  height: 65%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  will-change: transform;
+}
+
+#popular-adventures-section .text {
+  background-image: linear-gradient(0deg, #3f5efb, #fc466b);
+  border-radius: 30px;
+  position: absolute;
+  top: 55%;
+  left: -5px;
+  height: 65%;
+  width: 108%;
+  transform: skew(19deg, -9deg);
+  will-change: background-image;
+}
+
+#popular-adventures-section.second .text {
+  background-image: linear-gradient(-20deg, #bb7413, #e7d25c);
+}
+
+#popular-adventures-section .logo {
+  height: 80px;
+  width: 80px;
+  border-radius: 20px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 30%;
+  left: 30px;
+  overflow: hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
+}
+
+#popular-adventures-section .logo img {
+  height: 100%;
+}
+
+#popular-adventures-section .main-text {
+  position: absolute;
+  color: #fff;
+  font-weight: 900;
+  left: 150px;
+  bottom: 26%;
+  will-change: transform;
+}
+
+#popular-adventures-section .main-text h3 {
+  font-size: 20px;
+}
+
+#popular-adventures-section .card-btn {
+  position: absolute;
+  color: #fff;
+  right: 30px;
+  bottom: 10%;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  animation: button-anim 3s ease infinite;
+  transition: .4s ease-in-out;
+  will-change: background, border;
+}
+
+@keyframes button-anim {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+#popular-adventures-section .card-btn:hover {
+  animation-play-state: paused;
+  background: #ffffff44;
+  backdrop-filter: blur(12px);
+  border: 1px solid #000000;
+}
+
+#popular-adventures-section .card-btn:hover span {
+  text-decoration: underline;
+  color: black;
+}
+
+#popular-adventures-section .card-btn span {
+  transition: .3s;
+  color: #fff;
+  text-decoration: none;
+}
+
+#popular-adventures-section .price-desc {
+  position: absolute;
+  color: #ffffff;
+  left: 50px;
+  bottom: 10%;
+  font-weight: 800;
+}
+
+#popular-adventures-section .price-desc p {
+  font-weight: 800;
+}
+
+#popular-adventures-section .price-desc p span svg {
+  height: 20px;
+  margin-left: 1px;
+  fill: white;
+}
+
+#popular-adventures-section .images-container {
+  width: 100%;
+  font-size: 15px;
+  padding-block: 8px;
+  display: flex;
+  margin-top: 100px;
+  overflow: hidden;
+  user-select: none;
+  --gap: 20px;
+  gap: var(--gap);
+}
+
+#popular-adventures-section .images-container ul {
+  cursor: pointer;
+  padding: 0;
+  min-width: 100%;
+  flex-shrink: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap);
+  animation: scroll 40s linear infinite;
+  will-change: transform;
+}
+
+#popular-adventures-section .images-container:hover ul {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  to { transform: translateX(calc(-100% - var(--gap))); }
+}
+
+#popular-adventures-section .images-container li {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.329);
+}
+
+#popular-adventures-section .images-container li a {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+#popular-adventures-section .images-container li a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: .6s ease;
+  will-change: background-color;
+}
+
+#popular-adventures-section .images-container li a:hover::after {
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+
+#popular-adventures-section .images-container li:hover h4 {
+  top: 50%;
+}
+
+.images-container li h4 {
+  transition: .6s ease;
+  position: absolute;
+  color: white;
+  text-shadow: 0 0 10px rgb(0, 0, 0);
+  z-index: 1;
+  top: 78%;
+  font-size: 40px;
+  font-weight: 600;
+}
+.images-container ul img {
+  object-fit: cover;
+  object-position: center;
+  height: 290px;
+  width: 290px;
+}
+
+
+
+
+@media only screen and (max-width: 1420px) {
+
+#popular-adventures-section .card {
+
+    width: 340px;
+    height: 450px;
+
+}
+#popular-adventures-section .main-text h3 {
+    font-size: 18px;
+}
+#popular-adventures-section .card-btn {
+    right: 1%;
+    padding: 8px 16px;
+}
+
+
+}
+
+@media only screen and (max-width: 1220px) {
+
+#popular-adventures-section #popular-adventures-cards-container {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+}
+#popular-adventures-section .card {
+    width: 400px;
+    height: 500px;
+    margin: 20px 10px ;
+
+}
+#popular-adventures-section .main-text h3 {
+    font-size: 22px;
+}
+    #popular-adventures-section .price-desc p {
+        font-size: 20px;
+    }
+#popular-adventures-section .card-btn {
+    right: 30px;
+    padding: 10px 20px;
+}
+
+
+}
+@media only screen and (max-width: 920px) {
+  #popular-adventures-section .card:hover {
+  scale: 0.95;
+}
+#popular-adventures-section .card .trip-duration-label {
+  opacity: 1;
+  scale: 1;
+}
+#popular-adventures-section .card {
+    width: 350px;
+    height: 450px;
+    margin: 20px 10px ;
+
+}
+#popular-adventures-section .main-text h3 {
+    font-size: 18px;
+}
+    #popular-adventures-section .price-desc p {
+        font-size: 14px;
+    }
+#popular-adventures-section .card-btn {
+    right: 15px;
+    padding: 8px 16px;
+}
+
+
+}
+
+@media only screen and (max-width: 820px) {
+#popular-adventures-section .card {
+    width: 340px;
+   
+}
+.images-container ul img {
+
+    height: 190px;
+    width: 190px;
+}
+#popular-adventures-section .images-container li:hover h4 {
+    top: 45%;
+}
+.images-container li h4 {
+   
+    font-size: 30px;
+}
+}
+@media only screen and (max-width: 720px) {
+#popular-adventures-section .card {
+    width: 400px;
+    height: 520px;
+    margin: 20px 0px ;
+
+}
+#popular-adventures-section .main-text h3 {
+    font-size: 22px;
+}
+    #popular-adventures-section .price-desc p {
+        font-size: 18px;
+    }
+    #popular-adventures-section .card-btn {
+    right: 30px;
+    padding: 10px 20px;
+}
+}
+@media only screen and (max-width: 620px) {
+
+.images-container ul img {
+
+    height: 160px;
+    width: 160px;
+}
+#popular-adventures-section .images-container li:hover h4 {
+    top: 43%;
+}
+}
+@media only screen and (max-width: 420px) {
+#popular-adventures-section .card {
+    width: 98%;
+    height: 450px;
+
+}
+#popular-adventures-section .main-text h3 {
+    font-size: 16px;
+}
+    #popular-adventures-section .price-desc p {
+        font-size: 14px;
+    }
+    #popular-adventures-section .card-btn {
+    right: 30px;
+    padding: 6px 12px;
+}
+.images-container ul img {
+
+    height: 140px;
+    width: 140px;
+}
+}
+@media only screen and (max-width: 320px) {
+#popular-adventures-section .card {
+    width: 99%;
+    height: 400px;
+
+}
+#popular-adventures-section .main-text h3 {
+    font-size: 14px;
+}
+  #popular-adventures-section .price-desc p {
+        font-size: 13px;
+    }
+    #popular-adventures-section .card-btn {
+    right: 10px;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+.images-container ul img {
+
+    height: 120px;
+    width: 120px;
+}
+}

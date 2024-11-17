@@ -1,0 +1,137 @@
+.accordion-item .accordion-button{
+    color: white;
+    transition: .4s;
+width: 100%;
+    /* box-shadow: 0 0 20px rgba(1, 124, 255, 0.443); */
+    /* border-radius: 70px!important; */
+        background: linear-gradient(to left, var(--card2-gradient-color1), var(--card2-gradient-color2));
+padding:10px;
+font-size: 25px;
+font-weight: 600;
+
+}
+.accordion-item .accordion-button::after {
+    width: 2rem;
+    height: 2rem;
+    content: "";
+    background-size: 2rem;
+    margin-right: 20px;
+}
+
+.accordian-number-tag{
+    transition: .4s;
+
+         color: white;
+    border: 5px solid rgb(255, 255, 255);
+
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 20px;
+        background: linear-gradient(to left, var(--card2-gradient-color1), var(--card2-gradient-color2));
+font-size: 35px;
+font-weight: 700;
+}
+ .accordion-button.collapsed .accordian-number-tag{
+       color: #052C65;
+    border: 5px solid #052C65;
+}
+
+.accordion {
+    overflow: hidden;
+    border-radius: 10px;
+      box-shadow: var(--bs-accordion-btn-focus-box-shadow);
+}
+.accordion .accordion-button:focus {
+    z-index: 3;
+    outline: 0;
+    box-shadow: none;
+}
+
+
+    @media only screen and (max-width: 1220px) {
+
+
+
+#destination-current-package-section #current-package-details-btns {
+    gap: 20px;
+}
+    }
+
+    @media only screen and (max-width: 1020px) {
+
+.accordion-item .accordion-button {
+
+    font-size: 22px;
+}
+.accordian-number-tag {
+ font-size: 29px;
+}.accordion-body {
+    font-size: 15px;
+}
+    }
+    @media only screen and (max-width: 920px) {
+.accordion-item .accordion-button {
+
+    font-size: 18px;
+}
+.accordian-number-tag {
+ font-size: 19px;
+}
+.accordion-body {
+    font-size: 13px;
+}
+    }
+    @media only screen and (max-width: 620px) {
+
+    .accordion-item .accordion-button::after {
+
+    background-size: 1.5rem;
+    background-position: center;
+    margin-right: 5px;
+
+}
+  .accordian-number-tag {
+    margin-right: 8px;
+        padding: 15px;
+
+    }
+    }
+    @media only screen and (max-width: 420px) {
+             .accordion-item .accordion-button {
+        font-size: 14px;
+    }
+  .accordian-number-tag {
+        font-size: 14px;
+    margin-right: 6px;
+        padding: 10px;
+
+    }
+    
+   
+    .accordion-item .accordion-button::after {
+
+    background-size: 1.2rem;
+}
+    .accordion-body {
+        font-size: 11px;
+        padding: 10px!important;
+    }
+
+    }
+    @media only screen and (max-width: 320px) {
+             .accordion-item .accordion-button {
+        font-size: 13px;
+    }
+  .accordian-number-tag {
+        font-size: 13px;
+    margin-right: 5px;
+    padding: 7px;
+    }
+    .accordion-body {
+        font-size: 10px;
+        padding: 5px !important;
+    }
+    }

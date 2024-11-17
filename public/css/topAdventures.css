@@ -1,0 +1,426 @@
+#top-adventures-section {
+  padding-bottom: 80px;
+  background: white;
+}
+
+#top-adventures-container {}
+
+#top-adventures-inner-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#top-adventures-heading-container h2 {
+  text-align: center;
+  font-size: 21px;
+  text-transform: uppercase;
+}
+
+#top-adventures-desc-container h2 {
+  font-weight: 700;
+  text-align: center;
+  font-size: 45px;
+}
+
+#top-adventures-desc-container h2 span {
+  font-weight: 700;
+  text-align: center;
+  font-size: 45px;
+  color: rgb(81, 81, 255);
+}
+
+#top-adventures-desc-container p {
+  text-align: center;
+  font-size: 16px;
+}
+
+#top-adventures-section #cards-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  width: 100%;
+  user-select: none;
+  --gap: 0px;
+  gap: var(--gap);
+  max-width: 1420px;
+  position: relative;
+  will-change: scroll;
+}
+
+#top-adventures-section .cards-inner-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  scroll-snap-align: center;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  padding: 40px 0;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  transition: scroll 0.8s ease-in-out;
+  will-change: transform;
+}
+
+#top-adventures-section #cards-container:hover .cards-inner-container {
+  animation-play-state: paused;
+}
+
+/* Webkit Browsers */
+#cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+#top-adventures-section .card {
+  display: flex;
+  align-items: center;
+  scroll-snap-align: center;
+  height: 500px;
+  cursor: pointer;
+  border: none;
+  will-change: transform;
+}
+
+#top-adventures-section .card > div {
+  transition: .4s ease;
+  overflow: hidden;
+  width: 400px;
+  height: 100%;
+  position: relative;
+  border-radius: 30px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
+  will-change: transform, box-shadow;
+}
+
+#top-adventures-section .card > div:hover {
+  scale: .95;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+#top-adventures-section .card:hover .trip-duration-label {
+  opacity: 1;
+  scale: 1;
+}
+
+#top-adventures-section .trip-duration-label {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 20px;
+  border-radius: 30px;
+  scale: 0.2;
+  background-color: white;
+  box-shadow: 0 0 19px rgba(0, 0, 0, 0.313);
+  transition: .6s ease;
+  will-change: opacity, transform;
+}
+
+#top-adventures-section .trip-duration-label:hover h4 {
+  transform: translate(0px, 0px);
+  background-color: #0024d7;
+  color: rgb(255, 255, 255);
+}
+
+#top-adventures-section .trip-duration-label h4 {
+  transition: .4s;
+  padding: 9px 18px;
+  margin: 0;
+  background-color: #3154ff;
+  color: rgb(0, 0, 0);
+  border-radius: 30px;
+  font-size: 23px;
+  transform: translate(-4px, -3px);
+}
+
+#top-adventures-section .image {
+  height: 65%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+#top-adventures-section .text {
+  background-image: linear-gradient(0deg, #3f5efb, #fc466b);
+  border-radius: 30px;
+  position: absolute;
+  top: 55%;
+  left: -5px;
+  height: 65%;
+  width: 108%;
+  transform: skew(19deg, -9deg);
+  will-change: background-image;
+}
+
+#top-adventures-section.second .text {
+  background-image: linear-gradient(-20deg, #bb7413, #e7d25c);
+}
+
+#top-adventures-section .logo {
+  height: 80px;
+  width: 80px;
+  border-radius: 20px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 30%;
+  left: 30px;
+  overflow: hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
+  will-change: transform, box-shadow;
+}
+
+#top-adventures-section.logo img {
+  height: 100%;
+}
+
+#top-adventures-section .main-text {
+  position: absolute;
+  color: #fff;
+  font-weight: 900;
+  left: 150px;
+  bottom: 26%;
+}
+
+#top-adventures-section .main-text h3 {
+  font-size: 20px;
+}
+
+#top-adventures-section .card-btn {
+  position: absolute;
+  color: #fff;
+  right: 30px;
+  bottom: 10%;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  animation: button-anim 3s ease 0s infinite normal forwards;
+  transition: .4s ease-in-out;
+  will-change: background, color;
+}
+
+@keyframes button-anim {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+#top-adventures-section .card-btn:hover {
+  animation-play-state: paused;
+  background: #ffffff44;
+  backdrop-filter: blur(12px);
+  border: 1px solid #000000;
+}
+
+#top-adventures-section .card-btn:hover span {
+  text-decoration: underline;
+  color: black;
+}
+
+#top-adventures-section .card-btn span {
+  transition: .3s;
+  color: #fff;
+  text-decoration: none;
+}
+
+#top-adventures-section .price-desc {
+  position: absolute;
+  color: #ffffff;
+  left: 50px;
+  bottom: 10%;
+  font-weight: 800;
+}
+
+#top-adventures-section .price-desc p {
+  font-weight: 800;
+}
+
+#top-adventures-section .price-desc p span svg {
+  height: 20px;
+  margin-left: 1px;
+  fill: white;
+}
+
+#top-adventures-section.btn i:before {
+  width: 14px;
+  height: 14px;
+  position: fixed;
+  color: #fff;
+  background: #0077B5;
+  padding: 10px;
+  border-radius: 50%;
+  top: 5px;
+  right: 5px;
+}
+
+#cards-container i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+
+#cards-container i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+
+#cards-container i:first-child {
+  left: -22px;
+  z-index: 1;
+}
+
+#cards-container i:last-child {
+  right: -22px;
+}
+
+.wrapper .carouselm {}
+
+.carouselm::-webkit-scrollbar {
+  display: none;
+}
+
+#top-adventures-section .cards-inner-container.no-transition {
+  scroll-behavior: auto;
+}
+
+#top-adventures-section .cards-inner-container.dragging {
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 1250px) {
+#top-adventures-section #cards-container {
+
+    max-width: 872px;
+
+}
+#top-adventures-section .cards-inner-container {
+
+    grid-auto-columns: calc((100% / 2) - 12px);
+
+}
+#top-adventures-section .card {
+
+  scroll-snap-align: start;
+
+}
+
+}
+
+@media screen and (max-width: 900px) {
+  #top-adventures-section .card .trip-duration-label {
+    opacity: 1;
+    scale: 1;
+}
+#top-adventures-section #cards-container {
+
+    max-width: 700px;
+
+}
+#top-adventures-section .cards-inner-container {
+
+    grid-auto-columns: calc((100% ) - 12px);
+
+}
+    #top-adventures-section .card {
+        scroll-snap-align: center;
+    }
+}
+
+@media screen and (max-width: 420px) {
+#top-adventures-section #cards-container {
+
+
+}
+#top-adventures-section .card > div {
+
+    width: 98%;
+
+}
+#top-adventures-section .card {
+
+    height: 450px;
+  
+}
+#top-adventures-section .main-text h3 {
+    font-size: 16px;
+}
+#top-adventures-section .price-desc p {
+    font-size: 15px;
+}
+#top-adventures-section .card-btn {
+
+   right: 30px;
+    padding: 6px 12px;
+
+}
+
+}
+
+
+
+@media screen and (max-width: 320px) {
+#top-adventures-section #cards-container {
+
+
+}
+#top-adventures-section .card > div {
+
+    width: 98%;
+
+}
+#top-adventures-section .card {
+
+    height: 400px;
+  
+}
+#top-adventures-section .main-text h3 {
+    font-size: 14px;
+}
+#top-adventures-section .price-desc p {
+    font-size: 13px;
+}
+#top-adventures-section .card-btn {
+
+    right: 10px;
+    font-size: 13px;
+    padding: 5px 10px;
+
+}
+#top-adventures-section .text {
+   
+    width: 113%;
+  
+}
+}
+
+

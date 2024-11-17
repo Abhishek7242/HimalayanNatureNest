@@ -1,0 +1,12 @@
+.error-message{
+    position: absolute!important;
+    color: red;
+    margin-top: 6px;
+    font-size: 11px;
+    width: 100%!important;
+}
+.submittingForm{
+       background-color: #ffc4007b;
+       cursor: progress;
+       
+}

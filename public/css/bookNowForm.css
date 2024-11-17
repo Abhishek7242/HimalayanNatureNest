@@ -1,0 +1,179 @@
+    #book-now-form-section{
+          display: flex;
+       justify-content: center;
+       align-items: center;
+       background: white;
+    }
+    #book-now-form-container {
+        position: relative;
+        top: -80px;
+        background: rgb(255, 255, 255);
+        border-radius: 10px;
+        z-index: 1111;
+width: 80%;
+       height: 150px;
+        box-shadow: 0 5px 19px rgba(136, 136, 136, 0.384);
+
+       display: flex;
+       justify-content: center;
+       align-items: center;
+
+    }
+        #book-now-form-inner-container {
+        display: flex;
+        justify-content: center;
+width: 100%;
+    }
+    #book-now-form-inner-container form{
+        display: flex;
+        justify-content: space-evenly;
+width: 100%;
+    }
+    #book-now-form-inner-container form div{
+      position: relative;
+    }
+       #book-now-form-section #book-now-form-inner-container form > div svg {
+  height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 16px;
+    left: 10px;
+    fill: grey;
+}
+
+    #book-now-form-inner-container form input{
+        padding: 0 6px;
+   padding-left: 35px;
+
+        position: relative;
+        outline: none;
+        box-shadow: 0 5px 19px rgba(205, 203, 203, 0.591);
+        border: 1px solid grey;
+      height: 50px;
+      background: transparent;
+      border-radius: 8px;
+      z-index: 1;
+    }
+    #book-now-form-inner-container form div span{
+    position: absolute;
+    user-select: none;
+    top: 12px;
+    left: 35px;
+    transition: .4s ease;
+    z-index: 0;
+    }
+    #book-now-form-inner-container form div input:focus ~ span,    #book-now-form-inner-container form div input:valid ~ span{
+    top: -11px;
+    left: 30px;
+    background: white;
+    padding: 0 3px;
+      border-radius: 8px;
+
+    z-index:11;
+
+    scale: 0.7;
+    }
+    #book-now-submit-btn-container{
+background: rgb(4, 0, 125);
+      border-radius: 4px;
+
+    }
+    #book-now-submit-btn{
+           height: 59px;
+    width: 138px;
+        font-weight: 800;
+        background: #496CFE;
+        color: white;
+      border-radius: 4px;
+      border: none;
+      outline: none;
+      padding: 2px 18px;
+    transition: .4s;
+
+    transform: translate(-4px, -4px);
+
+    }
+     #book-now-submit-btn:hover{
+  transform: translate(0px, 0px);
+        background: blue;
+
+}
+     #book-now-submit-btn.submittingForm{
+  transform: translate(0px, 0px);
+        background: rgb(229, 255, 80);
+
+}
+     #book-now-submit-btn.submitFormSuccessfully{
+        background: rgb(17, 204, 0);
+
+}
+
+     #book-now-submit-btn.formNotSubmitted{
+        background: red;
+
+}
+
+@media only screen and (max-width: 1320px) {
+
+#book-now-form-container {
+
+    width: 85%;
+
+}
+}
+@media only screen and (max-width: 1220px) {
+#book-now-form-container {
+
+height: 300px;
+
+}
+#book-now-form-inner-container form {
+flex-wrap: wrap;
+gap: 35px;
+}
+#book-now-form-inner-container form div {
+    width: 40%;
+}
+#book-now-form-inner-container form input {
+
+    width: 100%;
+ 
+}
+#book-now-submit-btn {
+    width: 100%;
+
+}
+}
+@media only screen and (max-width: 820px) {
+#book-now-form-container {
+
+    width: 95%;
+
+}
+#book-now-form-inner-container form div {
+    width: 45%;
+}
+
+}
+@media only screen and (max-width: 620px) {
+
+#book-now-form-inner-container form div {
+    width: 90%;
+}
+#book-now-form-container {
+
+height: 450px;
+
+}
+}
+@media only screen and (max-width: 320px) {
+#book-now-form-container {
+
+    width: 98%;
+
+}
+#book-now-form-inner-container form div {
+    width: 95%;
+}
+
+}

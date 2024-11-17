@@ -1,0 +1,23 @@
+.scroll-container {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1.4s ease, transform 1.4s ease;
+    will-change: opacity, transform; /* For better performance */
+}
+
+.scroll-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.onload-container {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 1s ease, transform 1s ease;
+    will-change: opacity, transform; /* For better performance */
+}
+
+.onload-container.onload {  /* Fixed Typo Here */
+    opacity: 1;
+    transform: translateY(0);
+}
+

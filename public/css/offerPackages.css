@@ -1,0 +1,75 @@
+#offer-package-section{
+    margin-top: 70px;
+    padding: 10px;
+      box-shadow: 0 0 20px rgba(111, 111, 111, 0.356);
+border-radius: 6px;
+      width: 400px;
+      margin-bottom: 40px;
+}
+#offer-package-section>h2{
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+    padding: 10px 15px;
+    color: white;
+  text-align: center;
+background: linear-gradient(to left, var(--card3-gradient-color1), var(--card3-gradient-color2));
+}
+#offer-package-section .offer-package{
+    width: 100%;
+    padding: 10px;
+text-decoration: none;
+color: black;
+ display: flex;
+ gap: 20px;
+ margin-top: 5px;
+ transition: .4s;
+}
+#offer-package-section .offer-package:hover{
+      box-shadow: 0 0 20px rgba(111, 111, 111, 0.256);
+z-index: 11;
+scale: 1.06;
+transform: translate(-20px,-10px);
+border-radius: 10px;
+}
+#offer-package-section .offer-package img{
+    object-fit: cover;
+    object-position: center;
+ height: 100px;
+ width: 100px;
+ border-radius: 10px;
+}
+#offer-package-section .offer-package h4{
+font-size: 18px;
+font-weight: 600;
+}
+#offer-package-section .offer-package p{
+color: blue;
+}
+
+
+    @media only screen and (max-width: 520px) {
+#offer-package-section .offer-package img {
+    height: 90px;
+    width: 90px;
+}
+#offer-package-section .offer-package h4 {
+    font-size: 16px;
+}
+#offer-package-section .offer-package p {
+    font-size: 15px;
+}
+
+    }
+    @media only screen and (max-width: 420px) {
+#offer-package-section .offer-package img {
+    height: 80px;
+    width: 80px;
+}
+#offer-package-section .offer-package h4 {
+    font-size: 14px;
+}
+#offer-package-section .offer-package p {
+    font-size: 13px;
+}
+
+    }

@@ -1,0 +1,47 @@
+#package-tags-section{
+       margin-top: 70px;
+    padding: 10px;
+      box-shadow: 0 0 20px rgba(111, 111, 111, 0.356);
+border-radius: 6px;
+      width: 400px;
+      margin-bottom: 40px;
+}
+#package-tags-section h2{
+   border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+    padding: 10px 15px;
+    color: white;
+  text-align: center;
+background: linear-gradient(to left, var(--card3-gradient-color1), var(--card3-gradient-color2));
+}
+#package-tags-section div{
+    margin-top: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+#package-tags-section .package-tag-btn{
+padding: 10px 25px;
+background: transparent;
+border: 2px solid #5448AB;
+color: #5448AB;
+border-radius: 4px;
+text-decoration: none;
+transition: .4s;
+}
+#package-tags-section .package-tag-btn:hover{
+background: #5448AB;
+color: white;
+border: 2px solid #5448AB;
+
+}
+
+    @media only screen and (max-width: 420px) {
+
+      #package-tags-section .package-tag-btn {
+    padding: 3px 12px;
+font-size: 14px;
+}
+    }

@@ -1,0 +1,234 @@
+#our-service-main-container{
+  
+}
+#our-service-main-container #our-service-inner-container{
+    display: flex;
+    padding-block: 50px;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+#our-service-main-container #service-image-container{
+    display: flex;
+    position: relative;
+    width: 650px;
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.251);
+  
+}
+#our-service-main-container #service-image-container p{
+    top: 20px;
+position: absolute;
+background: var(--booking-form-theme-color);
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.34);
+color: white;
+font-weight: 700;
+font-size: 18px;
+padding: 10px 20px;
+border-top-right-radius: 50px;
+border-bottom-right-radius: 50px;
+}
+#our-service-main-container #service-image-container img{
+height: 100%;
+width: 100%;
+object-position: center;
+object-fit: cover;
+}
+#our-service-main-container #service-desc-container{
+height: 100%;
+}
+#our-service-main-container #service-desc-container h3{
+font-weight: 700;
+font-size: 24px;
+}
+#our-service-main-container .services-on-booking{
+display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+#our-service-main-container #service-desc-container div span svg{
+height: 20px;
+fill: var(--booking-form-theme-color,rgb(0, 153, 255));
+}
+#our-service-main-container #service-desc-container div span{
+font-size: 14px;
+margin: 0 5px;
+}
+#our-service-main-container #service-summary-container{
+    position: relative;
+    color: white;
+    min-height: 400px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+    background: var(--service-page-middle-image) no-repeat center center/cover;
+
+}
+#our-service-main-container #service-summary-container h3{
+font-weight: 700;
+font-size: 46px;
+position: relative;
+z-index: 1;
+}
+#our-service-main-container #service-summary-container p{
+
+position: relative;
+z-index: 1;
+}
+#our-service-main-container #service-summary-container::before{
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ background: rgba(0, 0, 0, 0.705);
+ z-index: 0;
+ height: 100%;
+}
+@media only screen and (max-width: 1220px) {
+#our-service-main-container #service-image-container {
+
+    width: 395px!important;
+    height: 318px!important;
+
+}
+#our-service-main-container #our-service-inner-container {
+
+    gap: 10px;
+ 
+}
+}
+@media only screen and (max-width: 1020px) {
+#our-service-main-container #service-desc-container {
+    width: 48%;
+}
+#our-service-main-container #service-desc-container h3 {
+    font-size: 19px!important;
+}
+#our-service-main-container #service-desc-container p {
+    font-size: 14px;
+}
+}
+@media only screen and (max-width: 820px) {
+#our-service-main-container #service-summary-container {
+  
+    min-height: 321px!important;
+
+}
+#our-service-main-container #service-summary-container h3 {
+    font-size: 35px!important;
+ 
+}
+#our-service-main-container #service-summary-container p {
+font-size: 13px;
+text-align: center;
+}
+#our-service-main-container #our-service-inner-container {
+
+    flex-direction: column;
+    align-items: center;
+}
+    #our-service-main-container #service-image-container {
+        width: 80% !important;
+        height: 400px !important;
+    }
+        #our-service-main-container #service-desc-container {
+        width: 80%;
+    }
+        #our-service-main-container #service-desc-container h3 {
+        font-size: 26px !important;
+        margin-top: 20px;
+    }
+}
+@media only screen and (max-width: 720px) {
+#our-service-main-container #service-summary-container {
+  
+    min-height: 300px!important;
+
+}
+#our-service-main-container #service-summary-container h3 {
+    font-size: 31px!important;
+ 
+}
+    #our-service-main-container #service-image-container {
+        width: 90% !important;
+        height: 360px !important;
+    }
+    #our-service-main-container #service-desc-container h3 {
+        font-size: 23px !important;
+        margin-top: 20px;
+    }
+}
+@media only screen and (max-width: 620px) {
+
+#our-service-main-container #service-summary-container h3 {
+    font-size: 27px!important;
+ 
+}
+    #our-service-main-container #service-summary-container p {
+        font-size: 11px;
+        padding: 0 20px;
+    }
+}
+@media only screen and (max-width: 520px) {
+
+    #our-service-main-container #service-summary-container h3 {
+        font-size: 24px !important;
+    }
+    #our-service-main-container #service-image-container {
+        width: 94% !important;
+        height: 300px !important;
+    }
+    #our-service-main-container #service-image-container p {
+
+    font-size: 15px!important;
+   
+}
+}
+@media only screen and (max-width: 420px) {
+
+    #our-service-main-container #service-summary-container h3 {
+        font-size: 23px !important;
+    }
+  #our-service-main-container #service-summary-container p {
+        font-size: 9px;
+    }
+      #our-service-main-container #service-image-container {
+        width: 97% !important;
+        height: 300px !important;
+    }
+    #our-service-main-container #service-desc-container h3 {
+        font-size: 18px !important;
+        margin-top: 20px;
+    }
+        #our-service-main-container #service-desc-container p {
+        font-size: 12px;
+    }
+    
+    #our-service-main-container #service-summary-container h3 {
+        font-size: 18px !important;
+    }
+}
+
+
+@media only screen and (max-width: 360px) {
+
+    #our-service-main-container #service-image-container p {
+
+    font-size: 12px!important;
+   
+}
+    #our-service-main-container #service-image-container {
+        width: 98% !important;
+        height: 230px !important;
+    }
+}
+@media only screen and (max-width: 320px) {
+
+    #our-service-main-container #service-summary-container h3 {
+        font-size: 16px !important;
+    }
+ 
+}

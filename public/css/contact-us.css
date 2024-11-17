@@ -1,0 +1,178 @@
+#contact-us-section{
+}
+#contact-us-section #contact-us-inner-container{
+min-height: 100vh;
+padding-block: 50px;
+/* display: none; */
+}
+#contact-us-section #contact-us-form-container{
+display: flex;
+    gap: 80px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#contact-us-section #contact-us-heading{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+#contact-us-section #contact-us-info{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+#contact-us-section #contact-us-heading p{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+
+#contact-us-section #contact-us-form > div{
+    width: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 40px;
+}
+#contact-us-section #contact-us-form form{
+      gap: 30px;
+    width: 100%;
+    display: flex;
+    border-radius: 10px;
+     background: linear-gradient(45deg,rgba(13, 0, 255, 0.651),rgba(142, 232, 255, 0.61));
+    padding: 50px 30px;
+    flex-direction: column;
+
+}
+#contact-us-section #contact-us-form form > div{
+width: 100%;
+display: flex;
+justify-content: center;
+background:white ;
+align-items: center;
+position: relative;
+ border-radius: 10px;
+
+}
+#contact-us-section #contact-us-form form > div span{
+position: absolute;
+left: 14px;
+z-index: 0;
+transition: .3s;
+
+}
+#contact-us-section #contact-us-form form > div input{
+    z-index: 1;
+ width: 100%;
+ background: transparent;
+ padding: 10px;
+ border-radius: 10px;
+ border-color: rgb(66, 66, 66);
+ outline: none;
+}
+#contact-us-section #contact-us-form form > div input:focus ~ span,
+#contact-us-section #contact-us-form form > div input:valid ~ span{
+left: 85%;
+
+}
+#contact-us-section #contact-us-form form #pnone-no input:focus ~ span,
+#contact-us-section #contact-us-form form #pnone-no input:valid ~ span{
+left: 75%;
+
+}
+#contact-us-section #contact-us-form textarea{
+  z-index: 1;
+ width: 100%;
+ background: transparent;
+ padding: 10px;
+ border-radius: 10px;
+ border-color: blue;
+ outline: none;
+}
+#contact-us-section #contact-us-form form > div button{
+background-color: #EE8F21;
+color: black;
+padding: 10px 30px;
+width: 100%;
+border: none;
+border-radius: 6px;
+}
+#contact-us-section #contact-us-details-button {
+    margin-top: 60px;
+display: flex;
+width: 100%;
+gap: 30px;
+justify-content: center;
+}
+#contact-us-section #contact-us-details-button > div {
+width: 380px;
+display: flex;
+flex-direction: column;
+align-items: start;
+padding: 10px 20px;
+justify-content: start;
+border-radius: 10px;
+   border: 2px solid blue;
+}
+#contact-us-section #contact-us-details-button > div h3{
+font-size: 30px;
+font-weight: 600;
+color: #EE8F21;
+}
+#contact-us-section #contact-us-address-detail p{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+font-size: 18px;
+font-weight: 600;
+
+}
+#contact-us-section #contact-us-details-button > div span{
+padding: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+    background: linear-gradient(45deg,rgb(13, 0, 255),rgb(142, 232, 255));
+
+border-radius: 50%;
+height: 45px;
+width: 45px;
+}
+#contact-us-section #contact-us-details-button > div svg{
+width: 30px;
+height: 30px;
+fill: hsl(0, 0%, 100%);
+}
+
+#contact-us-section #contact-us-contact-details > div{
+width: 100%;
+display: flex;
+justify-content: start;
+}
+#contact-us-section #contact-us-contact-details a{
+display: flex;
+justify-content: start;
+align-items: center;
+text-decoration: none;
+gap: 10px;
+background: transparent;
+outline: none;
+border: none;
+margin-bottom: 5px;
+cursor: pointer;
+padding: 5px;
+border-radius: 10px;
+width: 100%;
+transition: .4s ;
+font-size: 18px;
+font-weight: 600;
+}
+
+#contact-us-section #contact-us-contact-details a:hover{
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.493);
+
+}
+

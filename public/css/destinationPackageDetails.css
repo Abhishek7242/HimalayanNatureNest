@@ -1,0 +1,233 @@
+
+#destination-current-package-section #current-package-inner-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+#destination-current-package-section #current-package-container {
+    padding: 90px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    justify-content: start;
+    width: 60%;
+
+}
+#destination-current-package-section #current-package-details-container {
+   display: flex;
+   flex-direction: column; 
+   gap: 40px;
+   width: 100%;
+   overflow: hidden;
+    scroll-snap-align: center;
+}
+#destination-current-package-section #current-package-details-btns {
+   display: flex;
+   gap: 40px;
+   justify-content: center;
+   align-items: center;
+
+}
+#destination-current-package-section #current-package-details-btns a{
+    text-decoration: none;
+    color: var(--card2-gradient-color1);
+    padding: 12px 30px;
+    border: 3px solid var(--card2-gradient-color1);
+    border-radius: 40px;
+        background:white;
+font-weight: 600;
+transition: .3s;
+}
+#destination-current-package-section #current-package-details-btns a:hover{
+    color:white ;
+        background:var(--card2-gradient-color1);
+}
+#destination-current-package-section #current-package-details-btns a.active{
+    color:white ;
+        background:var(--card2-gradient-color1);
+            white-space: nowrap;
+}
+#destination-current-package-section #current-package-details-container h2{
+text-align: center;
+    font-size: clamp(25px, 3vw, 40px);
+
+font-weight: 700;
+}
+#destination-current-package-section #current-package-image-container{
+        /* height: 550px; */
+          aspect-ratio: 16 / 10; /* For a 16:9 aspect ratio */
+    width: 100%; /* The width can be set to 100% or any desired value */
+    max-height: 600px; /* Set a max height if needed */
+    /* width: 800px; */
+    border-radius: 61% 39% 45% 55% / 54% 76% 24% 46%;
+    overflow: hidden;
+    animation: blob 4s linear infinite;
+    cursor: pointer;
+}
+
+@keyframes blob {
+   0%,100%{
+   border-radius:  30% 70% 70% 30% / 30% 30% 70% 70% ;
+   } 
+   25%{
+    border-radius: 30% 70% 50% 50% / 68% 58% 42% 32%;
+   }
+   50%{
+    border-radius:74% 26% 68% 32% / 37% 74% 26% 63%  ;
+}
+75%{
+       border-radius: 56% 44% 39% 61% / 47% 52% 48% 53%  ;
+
+   }
+}
+ #destination-current-package-section #current-package-image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+ #destination-current-package-section #current-package-btn-pages-container{
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    width: 100%;
+    user-select: none;
+    --gap: 0px;
+    gap: var(--gap);
+    max-width: 1420px;
+    position: relative;
+}
+ #destination-current-package-section #current-package-btn-pages-container >div{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 1) - 12px);
+    scroll-snap-align: center;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 35px;
+    border-radius: 8px;
+    padding: 40px 0;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    transition: scroll 0.8s ease-in-out;
+    padding-left: 13px;
+}
+ #destination-current-package-section #current-package-btn-pages-container >div> div{
+  scroll-snap-align: center;
+}
+ #destination-current-package-section .cards{
+    transition: .6s ease;
+ scale: .5;
+}
+ #destination-current-package-section .cards.active{
+ scale: 1;
+}
+    @media only screen and (max-width: 1220px) {
+
+
+
+#destination-current-package-section #current-package-details-btns {
+    gap: 20px;
+}
+    }
+    @media only screen and (max-width: 1120px) {
+
+
+#destination-current-package-section #current-package-details-btns a {
+
+    padding: 8px 20px;
+
+}
+#destination-current-package-section #current-package-details-btns {
+    gap: 15px!important;
+}
+    }
+    @media only screen and (max-width: 1020px) {
+
+
+#destination-current-package-section #current-package-details-btns a {
+
+    padding: 6px 15px;
+
+}
+#destination-current-package-section #current-package-details-btns {
+    gap: 10px!important;
+}
+    }
+    @media only screen and (max-width: 920px) {
+
+
+#destination-current-package-section #current-package-details-btns a {
+
+    padding: 5px 13px;
+
+}
+#destination-current-package-section #current-package-details-btns {
+    gap: 8px!important;
+}
+    }
+    @media only screen and (max-width: 820px) {
+
+#destination-current-package-section #side-section{
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#destination-current-package-section #current-package-inner-container {
+
+    flex-direction: column;
+}
+#destination-current-package-section #current-package-container {
+   
+    width: 100%;
+}
+    }
+    @media only screen and (max-width: 620px) {
+
+#destination-current-package-section #current-package-container {
+    padding: 40px 10px;
+  
+}
+#destination-current-package-section #current-package-btn-pages-container >div {
+    padding: 0;
+    padding-left: 13px;
+}
+
+    }
+    @media only screen and (max-width: 520px) {
+    #destination-current-package-section #current-package-details-btns a {
+font-size: 14px;   
+
+}
+
+#destination-current-package-section #current-package-btn-pages-container >div {
+    padding: 0;
+    padding-left: 13px;
+}
+
+    }
+    @media only screen and (max-width: 420px) {
+
+        #destination-current-package-section #current-package-details-btns {
+flex-wrap: wrap;
+}
+    #destination-current-package-section #current-package-details-btns a {
+font-size: 16px;  
+width: 45%; 
+text-align: center;
+
+}
+
+#destination-current-package-section #current-package-btn-pages-container >div {
+    padding: 0;
+    padding-left: 13px;
+}
+  
+    }
+    @media only screen and (max-width: 320px) {
+    #destination-current-package-section #current-package-details-btns a {
+        font-size: 13px;
+
+    }
+    }

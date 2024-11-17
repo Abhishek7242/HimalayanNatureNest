@@ -1,0 +1,257 @@
+#book-this-tour-form-container{
+    box-shadow: 0 0 20px rgba(111, 111, 111, 0.356);
+    padding: 20px;
+    width: 400px;
+    margin-top: 60px;
+    border-radius: 10px;
+ 
+}
+#book-this-tour-form-container h2{
+text-align: center;
+}
+
+#book-this-tour-form-container form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+width: 100%;
+padding-block: 20px;
+}
+#book-this-tour-form-container form > div{
+  display: flex;
+   position: relative;
+   margin: 20px 0;
+    justify-content: center;
+    flex-direction: column;
+width: 100%;
+align-items: center;
+
+}
+#book-this-tour-form-container form > div .error-message {
+
+    margin-top: 70px;
+
+}
+#book-this-tour-form-container form #persons-count > div{
+  display: flex;
+   position: relative;
+   margin: 20px 0;
+    justify-content: center;
+    flex-direction: column;
+width: 100%;
+align-items: center;
+
+}
+#book-this-tour-form-container input{
+      z-index: 1;
+    padding: 0 10px;
+    font-size: 18px;
+    background-color: transparent;
+    height: 40px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+#book-this-tour-form-container select{
+      z-index: 1;
+    padding: 0 10px;
+    font-size: 18px;
+    background-color: transparent;
+    height: 40px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+#book-this-tour-form-container input.hidden-date{
+  opacity: 0;
+  transition: 1s ease;
+  cursor: pointer;
+}
+#book-this-tour-form-container input.hidden-date:focus,#book-this-tour-form-container input.hidden-date:valid{
+  opacity: 1;
+}
+#book-this-tour-form-container form div .i {
+    height: 2px;
+    z-index: 111;
+    width: 100%;
+            border-radius: 13px;
+
+    transition: .4s;
+    background-color:rgba(121, 121, 121, 0.365)
+
+}
+  #book-this-tour-form-container form div .i::before {
+            content: '';
+            height: 2px;
+            width: 0%;
+            background-color: rgba(21, 255, 0, 0.856);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
+            transition: width 0.4s;
+            border-radius: 13px;
+        }
+ #book-this-tour-form-container form div .i.error::before {
+    background-color:rgb(255, 9, 9)!important;
+    width: 100%;
+    
+ 
+}
+#book-this-tour-form-container form div input:focus ~ .i::before ,#book-this-tour-form-container form div input:valid ~ .i::before {
+    width: 100%;
+}
+#book-this-tour-form-container form div select:focus ~ .i::before ,#book-this-tour-form-container form div select:valid ~ .i::before {
+    width: 100%;
+}
+
+
+#book-this-tour-form-container form div span{
+position: absolute;
+top: 10px;
+left: 10px;
+font-size: 20px;
+transition:  0.4s;
+
+}
+#book-this-tour-form-container form div input:focus ~ span ,#book-this-tour-form-container form div input:valid ~ span {
+   transform: translateY(-26px);
+
+text-decoration: underline;
+font-size: 14px;
+}
+#book-this-tour-form-container form div select:valid ~ span {
+   transform: translateY(-26px);
+
+text-decoration: underline;
+font-size: 14px;
+}
+ #book-this-tour-form-container form div span.error {
+   transform: translateY(-26px);
+
+text-decoration: underline;
+font-size: 14px;
+    
+ 
+}
+#book-this-tour-form-container #persons-count {
+    flex-direction: row;
+   gap: 10px;
+   margin: 0;
+}
+
+
+#book-this-tour-form-container form > div button{
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+width: 100%;
+padding: 10px 20px;
+border-radius: 30px;
+border: none;
+margin-top: 20px;
+color: white;
+transition: .3s ease;
+font-weight: 600;
+font-size: 26px;
+    background: linear-gradient(to left, var(--card3-gradient-color1), var(--card3-gradient-color2));
+}
+
+#book-this-tour-form-container form > div button.submittingForm{
+  transform: translate(0px, 0px);
+        background: rgb(229, 255, 80);
+
+}
+     
+#book-this-tour-form-container form > div button.submitFormSuccessfully{
+        background: rgb(17, 204, 0);
+
+}
+
+#book-this-tour-form-container form > div button.formNotSubmitted{
+        background: red;
+
+}
+
+#book-this-tour-form-container form > div button:hover{
+    background: linear-gradient(to left, var(--card1-gradient-color1), var(--card1-gradient-color2));
+scale: .93;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    appearance: none !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    color: inherit !important;
+    border: 1px solid inherit !important;
+    box-shadow: 0 0 0px 1000px transparent inset !important;
+    -webkit-text-fill-color: inherit !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+}
+
+    @media only screen and (max-width: 1020px) {
+
+#book-this-tour-form-container,#offer-package-section ,#package-tags-section{
+   
+    width: 370px!important;
+    padding:10px;
+ 
+}
+
+    }
+    @media only screen and (max-width: 920px) {
+
+#book-this-tour-form-container,#offer-package-section,#package-tags-section {
+   
+    width: 350px!important;
+ 
+}
+
+    }
+    @media only screen and (max-width: 820px) {
+#book-this-tour-form-container,#offer-package-section,#package-tags-section {
+   
+    width: 500px!important;
+ margin-top: 0;
+}
+    }
+    @media only screen and (max-width: 620px) {
+#book-this-tour-form-container,#offer-package-section,#package-tags-section {
+   
+    width: 400px!important;
+ margin-top: 0;
+}
+    }
+    @media only screen and (max-width: 520px) {
+#book-this-tour-form-container,#offer-package-section,#package-tags-section {
+   
+    width: 400px!important;
+ margin-top: 0;
+}
+    }
+    @media only screen and (max-width: 420px) {
+#book-this-tour-form-container,#offer-package-section,#package-tags-section {
+   
+    width: 90%!important;
+ margin-top: 0;
+}
+#book-this-tour-form-container form > div button {
+    width: 80%;
+    font-size: 21px;
+}
+
+    }
+    @media only screen and (max-width: 320px) {
+#book-this-tour-form-container,#offer-package-section,#package-tags-section {
+   
+    width: 95%!important;
+ margin-top: 0;
+}
+#book-this-tour-form-container form #persons-count .error-message {
+    font-size: 9px;
+}
+    }
+
+    

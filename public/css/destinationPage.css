@@ -1,0 +1,45 @@
+#destination-tour-package-section{
+    
+}
+#destination-tour-package-section #package-section-inner-container{
+    display: flex;
+    justify-content: center;
+}
+#destination-tour-package-section #tour-packages-container{
+padding: 90px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 30px;
+justify-content: start;
+}
+
+@media only screen and (max-width: 1320px) {
+#destination-tour-package-section #tour-packages-container{
+padding: 90px 30px;
+
+}
+
+}
+@media only screen and (max-width: 1220px) {
+#destination-tour-package-section #tour-packages-container{
+padding: 90px 10px;
+
+}
+#destination-tour-package-section #package-section-inner-container{
+    justify-content: space-evenly;
+}
+}
+@media only screen and (max-width: 1120px) {
+
+#destination-tour-package-section #package-section-inner-container{
+    flex-direction: column;
+    align-items: center;
+}
+#destination-tour-package-section #side-section{
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+}

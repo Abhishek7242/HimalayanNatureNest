@@ -1,0 +1,74 @@
+#our-mission-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+#our-mission-outer-container{
+    width: 100%;
+}
+#our-mission-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: start;
+flex-direction: column;
+}
+#our-mission-container h2{
+    display: flex;
+    width: 100%;
+    font-size: 40px;
+    font-weight: 700;
+  
+}
+#our-mission-container span{
+       font-size: 40px;
+    font-weight: 700;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+flex-direction: column;
+    color: blue;
+
+}
+#our-mission-cards-container{
+    display: flex;
+    padding-block: 30px;
+    gap: 30px;
+}
+#our-mission-cards-container h3{
+     font-size: 30px;
+    font-weight: 500;
+}
+
+#image-container{
+    height: 400px;
+    width: 80%;
+    border-radius: 61% 39% 45% 55% / 54% 76% 24% 46%  ;
+    overflow: hidden;
+animation: blob 4s linear infinite;
+
+}
+@keyframes blob {
+   0%,100%{
+   border-radius:  30% 70% 70% 30% / 30% 30% 70% 70% ;
+   } 
+   25%{
+    border-radius: 30% 70% 50% 50% / 68% 58% 42% 32%;
+   }
+   50%{
+    border-radius:74% 26% 68% 32% / 37% 74% 26% 63%  ;
+}
+75%{
+       border-radius: 56% 44% 39% 61% / 47% 52% 48% 53%  ;
+
+   }
+}
+#image-container img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+}
