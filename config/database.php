@@ -43,13 +43,14 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
+   
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', 'himalayan-nature-nest.mysql.database.azure.com'), // Your Azure MySQL host
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'Himalayan-Nature-Nest'), // Your database name
-            'username' => env('DB_USERNAME', 'himalayan_nature_nest_admin'), // Your username
+            'username' => env('DB_USERNAME', 'himalayan_nature_nest_admin@himalayan-nature-nest'), // Your username
             'password' => env('DB_PASSWORD', 'P@ssw0rd!2024$SecuRe'), // Your password
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
@@ -58,10 +59,11 @@ return [
             'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
-            'options'   => extension_loaded('pdo_mysql') ? array_filter([
-                // PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'), // Path to your SSL certificate (optional)
-                PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false, // Disable SSL verification
-            ]) : [],
+            'options' => extension_loaded('pdo_mysql') ? [
+                PDO::MYSQL_ATTR_SSL_CA => base_path('ssl/DigiCertGlobalRootG2.crt.pem'),
+
+                PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false, // Optional: Disable server certificate verification for local development
+            ] : [],
         ],
 
 
