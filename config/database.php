@@ -49,7 +49,7 @@ return [
             'host' => env('DB_HOST', 'himalayan-nature-nest.mysql.database.azure.com'), // Your Azure MySQL host
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'Himalayan-Nature-Nest'), // Your database name
-            'username' => env('DB_USERNAME', 'himalayan_nature_nest_admin@himalayan-nature-nest'), // Your username
+            'username' => env('DB_USERNAME', 'himalayan_nature_nest_admin'), // Your username
             'password' => env('DB_PASSWORD', 'P@ssw0rd!2024$SecuRe'), // Your password
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
