@@ -63,4 +63,4 @@ jobs:
           app-name: 'HimalayanNatureNest'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8D725A11CD3F4E3987B41E66F5A34514 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0EB26BFCB11E4516998E49C22C14E9B2 }}
