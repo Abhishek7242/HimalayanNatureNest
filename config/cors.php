@@ -12,6 +12,10 @@ return [
     | in web browsers. You are free to adjust these settings as needed.
     |
     */
+'paths' => ['api/*'],
+'allowed_origins' => ['https://himalayannaturenest.azurewebsites.net/'],
+'allowed_methods' => ['*'],
+'allowed_headers' => ['*'],
 
     'paths' => ['/*'],  // Allows all paths or adjust as needed
 
