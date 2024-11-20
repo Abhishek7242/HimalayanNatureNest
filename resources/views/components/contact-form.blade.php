@@ -67,5 +67,5 @@
         </div>
     </div>
 </div>
-
+<script src="{{ secure_url('js/contactForm.js') }}"></script>
 <script src="{{ url('js/contactForm.js') }}"></script>
