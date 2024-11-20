@@ -70,6 +70,6 @@
     </div>
 </div>
 </div>
-
+<script src="{{ secure_url('js/ourServiceBookingForm.js') }}"></script>
 <script src="{{ url('js/ourServiceBookingForm.js') }}"></script>
 
