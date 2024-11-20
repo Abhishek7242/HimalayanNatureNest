@@ -61,7 +61,7 @@
             <input type="checkbox" id="checkbox1" checked required>
             <label for="checkbox1">I agree to the above terms and conditions</label>
         </div>
-        <button id="ourServiceSubmitBtn" type="submit">Book Now</button>
+        <button id="ourServiceSubmitBtn" >Book Now</button>
     </div>
         </form>
     </div>
