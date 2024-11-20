@@ -3,7 +3,7 @@
 
     <div id="booking-form-container" >
         <h2 >Book Your {{$serviceName}} Now</h2>
-        <form action="">
+        <form >
             <input type="text" id="service-title" value="{{$name}}" hidden>
             <div class="input-container">
                 <input required autocomplete="name" id="ourServiceName" type="text" name="name" data-error-target="name">
