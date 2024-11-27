@@ -67,7 +67,10 @@ Route::get('/admin/login', function () {
     return view('admin/adminLogin');
 })->name('login');
 
-Route::post('/admin/login', [AdminCpntroller::class, 'adminlogin'])->name('adminlogin');
+Route::post('/admin/login', [AdminController::class, 'adminlogin'])
+     ->name('adminlogin')
+     ->middleware('https');
+
 // Route::get('/make/admin', function () {
 //             $email = 'sukantsharma8199@gmail.com';
 //             $password = Hash::make('gGjD26fHvshs36D6yuf');
