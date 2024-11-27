@@ -41,7 +41,7 @@ use Illuminate\Support\Facades\Hash;
 Route::get('/admin/tour-form', function () {
     if ( session('loggedIn') == true) {
         // Only allow access if the user is logged in
-        $AllPackages = TourDetail::all();
+    $AllPackages = TourDetail::select('*', 'my_row_id')->get();
         return view('admin.addTourDetails', compact('AllPackages'));
     }
     return redirect()->route('login'); 
