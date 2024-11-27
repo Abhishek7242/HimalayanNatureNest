@@ -24,6 +24,6 @@ function simulateDelayedResponse() {
                 success: true,
                 message: 'Simulated data received after delay',
             });
-        }, 0); // Simulate a delay
+        }, 5000); // Simulate a delay
     });
 }

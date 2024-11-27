@@ -42,10 +42,10 @@ let bookingNavColor = "linear-gradient(to left, #3f2b96, #a8c0ff)"; // PHP varia
 <h2>Offer Packages</h2>
  @foreach($AllofferPackages as $offerPackage)
     <x-offer-packages 
-        offerTitle='{{$offerPackage->title}}' 
-        offerDayNight='{{$offerPackage->duration}}' 
-        offerImage='{{$offerPackage->images}}' 
-        tourTitle='{{$offerPackage->tour_name}}' 
+        offerTitle='{{$offerPackage->tourPackageTitle}}' 
+        offerDayNight='{{$offerPackage->tourPackageDuration}}' 
+        offerImage='{{$offerPackage->tourPackageImage}}' 
+        tourTitle='{{$offerPackage->tourTitle}}' 
     />
 @endforeach
 </div>

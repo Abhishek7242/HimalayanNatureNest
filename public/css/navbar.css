@@ -59,7 +59,7 @@ object-position: center;
           height: 100dvh;
         background: #00000061;
         width: 100%;
-
+z-index: 111111111111;
 }
     #navigation-menu #mobile-nav #cut-btn{
   border-radius: 50%;
@@ -370,6 +370,9 @@ background: rgb(0, 0, 0);
      }
 
      @media only screen and (max-width: 820px) {
+      header{
+        position: sticky;
+      }
 #navbar{
   background: #ffffff70;
   box-shadow: 0px 0 20px #ffffff70;

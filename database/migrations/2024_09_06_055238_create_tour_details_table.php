@@ -24,6 +24,7 @@ class CreateTourDetailsTable extends Migration
             $table->string('tourPackageEndPoint');
             $table->string('tourCoverImage');
             $table->string('packageTags');
+            $table->integer('offerPackage')->default(0); // 0 for false, 1 for true
 
             $table->timestamps();
         });

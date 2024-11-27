@@ -109,30 +109,20 @@ let bookingNavColor = "#7F00FF"; // PHP variable
 <h2>Offer Packages</h2>
 
  @foreach($AllofferPackages as $offerPackage)
-    <x-offer-packages 
-        offerTitle='{{$offerPackage->title}}' 
-        offerDayNight='{{$offerPackage->duration}}' 
-        offerImage='{{$offerPackage->images}}' 
-        tourTitle='{{$offerPackage->tour_name}}' 
+       <x-offer-packages 
+        offerTitle='{{$offerPackage->tourPackageTitle}}' 
+        offerDayNight='{{$offerPackage->tourPackageDuration}}' 
+        offerImage='{{$offerPackage->tourPackageImage}}' 
+        tourTitle='{{$offerPackage->tourTitle}}' 
     />
 @endforeach
 </div>
 <div id="package-tags-section">
 <h2>Package Tags</h2>
 <div>
-
-    <x-packages-tags tagName='Shimla' />
-    <x-packages-tags tagName='Amritsar' />
-    <x-packages-tags tagName='Jibhi' />
-    <x-packages-tags tagName='Dharamshala' />
-    <x-packages-tags tagName='Manali' />
-    <x-packages-tags tagName='Kasol' />
-    <x-packages-tags tagName='Kullu' />
-    <x-packages-tags tagName='Kufri' />
-    <x-packages-tags tagName='Offbeat Himachal' />
-    <x-packages-tags tagName='Tirthan Valley' />
-  
-    
+@foreach($AllTourDetails as $TourDetails)
+    <x-packages-tags tagName='{{$TourDetails->packageTags}}' />
+@endforeach
 </div>
 </div>
 

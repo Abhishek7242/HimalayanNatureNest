@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Booknowform;
 use App\Models\BookOurService;
 use App\Models\BookThisTour;
+use App\Models\ContactForm;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator; // Ensure correct import
 
@@ -123,4 +124,42 @@ $booking->save();
     'data' => $request->all(),
 ], 201);
     }
+
+    public function contactus(Request $request)
+    {
+        // Validate the incoming request data
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:225',
+            'email' => 'required|email|max:225',
+            'number' => 'required|numeric',
+           
+        ]);
+
+        // Check if the validation fails
+        if ($validator->fails()) {
+            return response()->json([
+                'success' => false,
+                'errors' => $validator->errors()->toArray(),
+            ], 422);
+        }
+
+
+        // If validation passes, you can save the data
+        // Uncomment and use if you have a corresponding model
+        
+   $contact = new ContactForm();
+    
+        $contact->name = $request->name;
+$contact->email = $request->email;
+$contact->number = '+' . $request->countryCode . $request->number;
+$contact->message = $request->message? $request->message:'';
+$contact->save();
+        // Return a success response
+ return response()->json([
+    'success' => true,
+    'message' => 'Client added successfully',
+    'data' => $request->all(),
+], 201);
+    }
+
 }

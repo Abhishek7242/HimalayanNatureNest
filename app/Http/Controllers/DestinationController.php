@@ -17,9 +17,9 @@ class DestinationController extends Controller
             ["name" => "About us", "url" => "/about-us"],
             ["name" => $destination, "url" => "#"]
         ];
- 
-    
-        $AllofferPackages = OfferPackage::all();
+
+
+        $AllofferPackages = TourDetail::where('offerPackage', true)->get();
     $AllTourDetails = TourDetail::where('tourTitle', ucfirst($destination))->get();
         $breadcrumbImageUrl = $AllTourDetails[0]->tourCoverImage ?? 'https://ei.phncdn.com/videos/202309/30/440385741/original/(m=eGNdHgaaaa)(mh=dAGrsTF7NVVTmYLp)13.jpg';
         

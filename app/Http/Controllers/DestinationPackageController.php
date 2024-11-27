@@ -22,9 +22,11 @@ class DestinationPackageController extends Controller
         $tourPackageDetails = TourDetail::where('tourPackageTitle', $packageReadable)->first();
         $offerPackage = OfferPackage::where('title', $packageReadable)->first();
         $breadcrumbImageUrl = $tourPackageDetails->tourPackageImage ?? $offerPackage->images;
-$AllofferPackages = OfferPackage::all();
+        $AllofferPackages = TourDetail::where('offerPackage', true)->get();
+        $AllTourDetails = TourDetail::where('tourTitle', ucfirst($destination))->get();
+
 
         // return view('frontend.destinationPage', ['destination' => $destination]);
-        return view('frontend.destinationPackageDetails', compact('AllofferPackages','breadcrumbs','package', 'destination', 'packageReadable', 'packageReadableTrimmed', 'breadcrumbImageUrl'));
+        return view('frontend.destinationPackageDetails', compact('AllTourDetails','AllofferPackages','breadcrumbs','package', 'destination', 'packageReadable', 'packageReadableTrimmed', 'breadcrumbImageUrl'));
     }
 }

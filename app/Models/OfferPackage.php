@@ -12,5 +12,10 @@ class OfferPackage extends Model
     protected $table = 'offerspackages';
 
     protected $primaryKey = 'offerspackages_id';
-
+    protected $fillable = [
+        'title',
+        'tour_name',
+        'duration',
+        'images',
+    ];
 }

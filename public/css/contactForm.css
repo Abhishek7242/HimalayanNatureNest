@@ -53,7 +53,9 @@ justify-content: center;
 align-items: center;
 
 }
-#contact-form-section #contact-form-container form div input:focus ~ span , #contact-form-container #contact-form-container form div input:valid ~ span {
+#contact-form-section #contact-form-container form div input:focus ~ span ,
+#contact-form-section #contact-form-container form div input:valid ~ span 
+ {
    transform: translateY(-26px);
 
 text-decoration: underline;
@@ -90,9 +92,18 @@ fill: rgb(255, 0, 0);
     
  
 }
-#contact-form-section #contact-form-container form div input:focus ~ .svg-box svg ,#contact-form-container #contact-form-container form div input:valid ~ .svg-box svg {
-fill: black;
-
+#contact-form-section #contact-form-container form div input:focus ~ .svg-box svg,
+#contact-form-section #contact-form-container form div input:valid ~ .svg-box svg {
+    fill: black;
+}
+#countryCode{
+    left: 20px;
+    background:white;
+    z-index: 1111;
+    padding: 4px 0;
+    border: none;
+    opacity: 0;
+    transition: .4s;
 }
 
 #contact-form-section #contact-form-container form div input{
@@ -108,7 +119,15 @@ fill: black;
     width: 100%;
 /* padding: 10px; */
 }
-#contact-form-section #contact-form-container form div textarea{
+#contactNumber{
+    padding-left: 69px!important;
+}
+#contact-form-section .contact-error-message{
+
+    left: -75px;
+    bottom: -44px;
+}
+    #contact-form-section #contact-form-container form div textarea{
 
      z-index: 1;
     padding: 5px;
@@ -161,7 +180,7 @@ fill: black;
     
  
 }
-#contact-form-section #contact-form-container form div input:focus ~ .i::before ,#contact-form-container #contact-form-container form div input:valid ~ .i::before {
+#contact-form-section #contact-form-container form div input:focus ~ .i::before ,#contact-form-section #contact-form-container form div input:valid ~ .i::before {
     width: 100%;
 }
 
@@ -212,7 +231,7 @@ fill: black;
     cursor: pointer; /* Changes the cursor to a pointer on hover */
     position: relative; /* Sets the position to relative, often used for positioning pseudo-elements */
     padding: 0 10px!important; /* Ensures no padding is applied */
-    background-color: transparent; /* Sets the initial background to transparent */
+    background: transparent; /* Sets the initial background to transparent */
             transition: .4s;
 
 }
@@ -233,7 +252,7 @@ fill: black;
     height: 14px;
     border: solid white;
     border-width: 0 2px 2px 0;
-            transition: .4s;
+            transition: 4s;
 
 }
 
@@ -244,10 +263,14 @@ fill: black;
         }
 
      #contact-form-section   button {
+                min-width: 130px;
+
             margin-left: 20px;
             padding: 10px 25px;
             background-color: #000000;
             border: none;
+                    height: 65px;
+overflow: hidden;
             border-radius: 5px;
             font-size: 25px ;
             font-weight: 600;
@@ -256,6 +279,25 @@ fill: black;
             transition: .4s;
         }
 
+     #contact-form-section   button img{
+object-position: center;
+height: 100%;
+     }
+     #contact-form-section   button.submittingForm{
+  transform: translate(0px, 0px);
+        background:#EE8F21;
+
+}
+
+    
+             #contact-form-section   button.submitFormSuccessfully{
+    background: rgb(17, 204, 0);
+
+}
+             #contact-form-section   button.formNotSubmitted{
+        background: red;
+
+}
      #contact-form-section   button:hover {
             background: #EE8F21;
         }

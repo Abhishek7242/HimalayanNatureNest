@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContactForm;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -14,6 +15,8 @@ class ContactController extends Controller
             ["name" => "About us", "url" => "/about-us"],
             ["name" => "Contact us", "url" => "#"]
         ];
+      
         return view('frontend.contactPage', compact('breadcrumbs'));
     }
+    
 }

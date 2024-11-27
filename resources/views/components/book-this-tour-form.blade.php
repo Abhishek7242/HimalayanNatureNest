@@ -67,4 +67,3 @@
 </div>
 <script src="{{ url('js/bookThisTour.js') }}"></script>
 <script src="{{ secure_url('js/bookThisTour.js') }}"></script>
-

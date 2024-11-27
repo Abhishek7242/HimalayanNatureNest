@@ -26,7 +26,7 @@ color: black;
 }
 #offer-package-section .offer-package:hover{
       box-shadow: 0 0 20px rgba(111, 111, 111, 0.256);
-z-index: 11;
+z-index: 111111111;
 scale: 1.06;
 transform: translate(-20px,-10px);
 border-radius: 10px;
