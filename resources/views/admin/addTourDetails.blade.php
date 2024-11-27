@@ -106,7 +106,7 @@
         }
     </style>
 <div id="adminForm">
-    <form action="{{ route('submitTour') }}" method="POST" enctype="multipart/form-data">
+    <form action="/submit-tour" method="POST" enctype="multipart/form-data">
         <h2 style="text-align: center;">Add Tour</h2>
         @csrf
         <h1>Submit Tour Package</h1>
@@ -206,7 +206,8 @@
 
 
 
-    <form id="edit-form" action="{{ route('updateTour', ['id' => 'ID_PLACEHOLDER']) }}" method="POST" enctype="multipart/form-data">
+        <form id="edit-form" action="/tour/update/ID_PLACEHOLDER" method="POST" enctype="multipart/form-data">
+
         @csrf
           @method('POST')
         <h2 style="text-align: center;">Edit Tour</h2>
