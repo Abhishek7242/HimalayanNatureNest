@@ -67,7 +67,7 @@ Route::get('/admin/login', function () {
     return view('admin/adminLogin');
 })->name('login');
 
-Route::post('/admin/login', [AdminController::class, 'adminlogin'])
+Route::post('/admin/login', [AdminCpntroller::class, 'adminlogin'])
      ->name('adminlogin')
      ->middleware('https');
 
