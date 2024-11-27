@@ -302,7 +302,7 @@
 <h2 style="width: 100%">Offer Packages</h2>
 
 @foreach($AllPackages as $package)
-    <div style="width:30%;" onclick="getValues(event,'{{$package->tourDetails_id}}','{{$package->tourTitle}}', '{{$package->tourPackageTitle}}', '{{$package->tourPackageImage}}', '{{$package->tourPackageDuration}}', '{{$package->tourPackageRoute}}', '{{$package->tourPackageStartPoint}}', '{{$package->tourPackageEndPoint}}', '{{$package->tourCoverImage}}', '{{$package->packageTags}}', '{{$package->offerPackage}}')">
+    <div style="width:30%;" onclick="getValues(event,'{{$package->my_row_id}}','{{$package->tourTitle}}', '{{$package->tourPackageTitle}}', '{{$package->tourPackageImage}}', '{{$package->tourPackageDuration}}', '{{$package->tourPackageRoute}}', '{{$package->tourPackageStartPoint}}', '{{$package->tourPackageEndPoint}}', '{{$package->tourCoverImage}}', '{{$package->packageTags}}', '{{$package->offerPackage}}')">
         <x-offer-packages 
             offerTitle='{{$package->tourPackageTitle}}' 
             offerDayNight='{{$package->tourPackageDuration}}' 
