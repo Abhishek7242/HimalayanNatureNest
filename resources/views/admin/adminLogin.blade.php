@@ -10,7 +10,7 @@
     <div class="login-container">
         <div class="login-box">
             <h2>Login</h2>
-            <form action="{{ route('adminlogin') }}" method="POST">
+            <form action="/admin/login" method="POST">
                 @csrf
                 <div class="input-container">
                     <input type="text" id="email" name="email" placeholder="Email" required>
