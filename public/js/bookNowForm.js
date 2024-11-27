@@ -17,7 +17,6 @@ bookNowFormSubmitBtn.addEventListener('click', (e) => {
     bookNowFormSubmitBtn.classList.remove('formNotSubmitted');
     // bookNowFormSubmitBtn.classList.remove('submitForm');
     img.src = 'https://i.pinimg.com/originals/ea/b7/e1/eab7e1120c9dd628d3bb39a20a94927d.gif';
-    img.width = 60;
     bookNowFormSubmitBtn.innerText = '';
     bookNowFormSubmitBtn.appendChild(img);
 

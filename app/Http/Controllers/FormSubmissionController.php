@@ -90,7 +90,7 @@ $booking->save();
             'tourTitle' => 'required|string|max:225',
             'name' => 'required|string|max:225',
             'email' => 'required|email|max:225',
-            'number' => 'required|numeric',
+            'number' => 'required',
             'date' => 'required|string|max:225',
             'adult' => 'required|string|max:225',
             'child' => 'required|string|max:225',

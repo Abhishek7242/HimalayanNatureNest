@@ -112,7 +112,10 @@ background: rgb(4, 0, 125);
         background: red;
 
 }
-
+   #book-now-form-section   #book-now-submit-btn img{
+object-position: center;
+height: 100%;
+     }
 @media only screen and (max-width: 1320px) {
 
 #book-now-form-container {

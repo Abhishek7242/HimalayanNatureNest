@@ -54,7 +54,6 @@ ourServiceSubmitBtn.addEventListener('click', (e) => {
     ourServiceSubmitBtn.classList.remove('formNotSubmitted');
     // ourServiceSubmitBtn.classList.remove('submitForm');
     img.src = 'https://i.pinimg.com/originals/ea/b7/e1/eab7e1120c9dd628d3bb39a20a94927d.gif';
-    img.width = 60;
     ourServiceSubmitBtn.innerText = '';
     ourServiceSubmitBtn.appendChild(img);
 
@@ -85,6 +84,7 @@ ourServiceSubmitBtn.addEventListener('click', (e) => {
             };
 
             // Make the actual API call
+            console.log( options);
             return fetch("/api/our-service-form-submit", options);
         })
         .then(response => {

@@ -20,7 +20,8 @@ class PackagesTags extends Component
      */
     public function __construct($tagName)
     {
-        $tourPackage = TourDetail::where('tourPackageTitle', 'REGEXP', '[[:<:]]' . $tagName . '[[:>:]]')->first();
+        $tourPackage = TourDetail::where('tourPackageTitle', 'REGEXP', '\\b' . $tagName . '\\b')->first();
+
         $this->tourPackage = $tourPackage;
         $packageUrl = $tourPackage->tourPackageTitle ?? '#';
         $this->tourPackageName = str_replace(' ', '-', $packageUrl);

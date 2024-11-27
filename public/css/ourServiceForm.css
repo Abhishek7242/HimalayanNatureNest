@@ -224,6 +224,7 @@ fill: black;
             padding: 10px 25px;
             background-color: #000000;
             border: none;
+
             border-radius: 5px;
             font-size: 25px ;
             font-weight: 600;
@@ -243,6 +244,10 @@ fill: black;
     background: rgb(17, 204, 0);
 
 }
+         #our-service-booking-form-container   button.submitFormSuccessfully:hover{
+    background: rgb(17, 204, 0)!important;
+
+}
              #our-service-booking-form-container   button.formNotSubmitted{
         background: red;
 
@@ -250,6 +255,10 @@ fill: black;
  #our-service-booking-form-container   button:hover {
             background-color: var(--booking-form-theme-color);
         }
+         #our-service-booking-form-container   button img{
+object-position: center;
+height: 100%;
+     }
 #our-service-booking-form-container #booking-form-image-container{
  height: 100%;
  display: flex;
@@ -258,6 +267,7 @@ fill: black;
  position: relative;
  width: 100%;
 }
+
 #our-service-booking-form-container #booking-form-image-container img{
 z-index: 1;
  position: relative;

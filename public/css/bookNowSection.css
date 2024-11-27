@@ -120,7 +120,12 @@ position: relative;
             background: red;
 
 
+
 }
+#book-now-inner-container #book-now-section-form button img{
+object-position: center;
+height: 100%;
+     }
 #book-now-inner-container #book-now-section-images{
     width: 50%;
     display: flex;
